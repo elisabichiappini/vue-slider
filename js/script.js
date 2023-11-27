@@ -48,6 +48,9 @@ const { createApp } = Vue
             if(this.activeSlide > this.slides.length - 1) {
                 this.activeSlide = 0;
             }
+        },
+        clickThumbnailImage(index) {
+            console.log('clicca img');
         }
     }
   }).mount('#app')
