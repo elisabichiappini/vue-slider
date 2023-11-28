@@ -51,6 +51,8 @@ const { createApp } = Vue
         },
         clickThumbnailImage(index) {
             console.log('clicca img');
+            console.log(index);
+            this.activeSlide = index;
         }
     }
   }).mount('#app')
