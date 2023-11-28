@@ -54,5 +54,14 @@ const { createApp } = Vue
             console.log(index);
             this.activeSlide = index;
         }
+    },
+    //questo ciclo di vita ha accesso ai dati: quando monti l'applicazione fai cambiare l'immagine ogni 3 sec.
+    mounted() {
+        console.log('mounted funziona');
+        // con la arrow viene ereditato il contesto di partenza
+        setInterval(() => {
+            console.log(this);
+            this.next();
+        }, 3_000);
     }
   }).mount('#app')

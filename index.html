@@ -34,7 +34,12 @@
                     <!--/button to discover images-->
                     <!--thumbnail-->
                     <div v-for="(thumb, index) in slides" class="thumb">
-                        <img :src="thumb.image" :alt="thumb.title" class="thumb" :class="index === activeSlide ? 'active' : ''" @click="clickThumbnailImage(index)"/>
+                        <img 
+                        :src="thumb.image" 
+                        :alt="thumb.title" 
+                        class="thumb"
+                        :class="index === activeSlide ? 'active' : ''"
+                        @click="clickThumbnailImage(index)">
                     </div>
                     <!--/thumbnail-->
                 </div>
