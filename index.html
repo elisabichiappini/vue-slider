@@ -15,7 +15,7 @@
     <!--spazio gestito da vuejs-->
     <div id="app" v-cloak>
         <div class="container">
-            <div class="slider-wrapper" :tabindex="activeSlide">
+            <div class="slider-wrapper" :tabindex="activeSlide" @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay">
                 <!--slider-->
                 <div class="item">
                     <img :src="slides[activeSlide].image" :alt="slides[activeSlide].title" />
